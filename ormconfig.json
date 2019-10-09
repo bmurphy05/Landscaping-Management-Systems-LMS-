@@ -37,5 +37,4 @@
        "migrationsDir": "src/migration",
        "subscribersDir": "src/subscriber"
      }
-   }
  ]
