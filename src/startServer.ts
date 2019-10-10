@@ -1,4 +1,3 @@
-  
 import { importSchema } from "graphql-import";
 import { GraphQLServer } from "graphql-yoga";
 import * as path from "path";
