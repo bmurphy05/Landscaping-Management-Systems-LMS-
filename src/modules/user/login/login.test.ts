@@ -52,7 +52,6 @@ describe("login", () => {
     await loginExpectError(email, faker.internet.password(), invalidLogin);
 
     const response = await client.login(email, password);
-
     expect(response.data).toEqual({ login: null });
   });
 });

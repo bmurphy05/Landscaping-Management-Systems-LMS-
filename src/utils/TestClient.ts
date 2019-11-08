@@ -92,4 +92,31 @@ export class TestClient {
       }
     });
   }
+
+  async createJob(
+    date: string,
+    customer: string,
+    type: string,
+    details: string,
+    status: string
+  ) {
+    return rp.post(this.url, {
+      ...this.options,
+      body: {
+        query: `
+      mutation {
+        createJob(
+          date: "${date}",
+          customer: "${customer}",
+          type: "${type}",
+          details: "${details}",
+          status: "${status}") {
+          path
+          message
+        }
+      }
+      `
+      }
+    });
+  }
 }

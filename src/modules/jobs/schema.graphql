@@ -1,0 +1,29 @@
+
+type Job {
+    id: String
+    date: String
+    customer: User
+    landscaper: User
+    type: String
+    balance: Number
+    jobType: String
+    status: String
+    paymentStatus: String
+    details: String
+}
+
+type Query {
+    jobs: [Job],
+    job(id: String!): Job,
+    jobByID(customer: String!): [Job],
+}
+
+type Mutation {
+    createJob(date: String!, customer: String!,
+        type: String!, address: String!, details: String!, status: String!): [Error!],
+    cancelJob(date: String!, customer: String!, landscaper: String!,
+        type: String!, address: String!, details: String!, status: String!): [Error!],
+    updateJob(date: String!, customer: String!, landscaper: String!,
+        type: String!, address: String!, details: String!, balance: Float!, status: String!, paymentStatus: String!): [Error!],
+    updateBalance(paymentStatus: String!, balance: Float!): [Error!]
+}
