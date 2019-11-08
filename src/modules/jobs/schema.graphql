@@ -5,8 +5,8 @@ type Job {
     customer: User
     landscaper: User
     type: String
-    balance: Number
-    jobType: String
+    cost: Float
+    type: String
     status: String
     paymentStatus: String
     details: String

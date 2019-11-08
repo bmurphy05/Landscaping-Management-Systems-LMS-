@@ -32,7 +32,7 @@ export class Job extends BaseEntity {
     type!: string;
 
     @Column("float")
-    jobCost!: number;
+    cost!: number;
 
     @Column("text")
     status!: string;
