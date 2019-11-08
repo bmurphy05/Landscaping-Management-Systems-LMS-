@@ -1,18 +1,17 @@
 import { 
     Entity,
     Column,
-    PrimaryColumn,
-    BeforeInsert, 
+    PrimaryGeneratedColumn, 
     BaseEntity,
     OneToOne,
     JoinColumn
 } from "typeorm";
 import { User } from './index';
-import uuidv4 = require('uuid/v4');
+
 
 @Entity("jobs")
 export class Job extends BaseEntity {
-    @PrimaryColumn("uuid")
+    @PrimaryGeneratedColumn("uuid")
     id!: string;
 
     @Column("text")
@@ -42,9 +41,4 @@ export class Job extends BaseEntity {
 
     @Column("text")
     details!: string;
-
-    @BeforeInsert()
-    addId() {
-        this.id = uuidv4();
-    }
 }
