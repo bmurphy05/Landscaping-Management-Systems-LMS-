@@ -29,7 +29,6 @@ dummy2: string | null;
 dummy: string | null;
 me: IUser | null;
 bye: string | null;
-hello: string;
 }
 
 interface IJobOnQueryArguments {
