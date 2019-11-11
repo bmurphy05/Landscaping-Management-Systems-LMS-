@@ -6,7 +6,6 @@ type Job {
     landscaper: User
     type: String
     cost: Float
-    type: String
     status: String
     paymentStatus: String
     details: String

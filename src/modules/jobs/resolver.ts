@@ -11,7 +11,7 @@ export const resolvers: ResolverMap = {
   Mutation: {
     createJob: async (
       _: any,
-      { date, customer, type, details, status }: GQL.ICreateJobMutationArguments
+      { date, customer, type, details, status }: GQL.ICreateJobOnMutationArguments
     ) => {
       const job = Job.create({
         date,
